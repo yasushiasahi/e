@@ -1,0 +1,67 @@
+
+;; ----- amx-history -----
+(
+ prettier-js-mode
+ web-mode
+ lsp
+ flycheck-mode
+ flymake-mode
+ counsel-imenu
+ describe-key
+ crux-kill-other-buffers
+ neotree-dir
+ linum-mode
+ xml-mode
+ avy-linum-mode
+ html-mode
+ counsel-flycheck
+ typescript-mode
+ add-node-modules-path
+ mc/edit-lines
+ counsel-switch-buffer
+ switch-to-buffer
+ ibuffer
+ er/expand-region
+ leaf-convert-region-replace
+ cd
+ 5x5
+ amx
+ arp
+ dbx
+ dig
+ erc
+ ert
+ eww
+ ftp
+ gdb
+ irc
+ jdb
+)
+
+;; ----- amx-data -----
+(
+ (leaf-convert-region-replace . 1)
+ (er/expand-region . 1)
+ (prettier-js-mode . 95)
+ (neotree-dir . 4)
+ (lsp . 58)
+ (web-mode . 41)
+ (typescript-mode . 3)
+ (counsel-imenu . 4)
+ (describe-key . 7)
+ (ibuffer . 1)
+ (switch-to-buffer . 1)
+ (counsel-switch-buffer . 1)
+ (mc/edit-lines . 7)
+ (add-node-modules-path . 1)
+ (counsel-flycheck . 1)
+ (crux-kill-other-buffers . 7)
+ (html-mode . 1)
+ (avy-linum-mode . 2)
+ (linum-mode . 3)
+ (xml-mode . 1)
+ (prettier-js . 13)
+ (lsp-goto-type-definition . 2)
+ (flymake-mode . 2)
+ (flycheck-mode . 2)
+)
