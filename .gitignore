@@ -40,5 +40,7 @@
 
 
 .DS_Store
-/backups/
+/backups/*
+!/backups/.gitkeep
 /var/
+/auto-save-list/

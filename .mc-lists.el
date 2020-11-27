@@ -5,6 +5,7 @@
       '(
         crux-kill-whole-line
         crux-move-beginning-of-line
+        kill-region
         mark-sexp
         sp-backward-delete-char
         sp-delete-char

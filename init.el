@@ -644,8 +644,24 @@
 	       (split-window-vertically)
 	       (setq i (+ 1 i)))))))
 
+(leaf wgrep
+  :doc "Writable grep buffer and apply the changes to files"
+  :tag "extensions" "edit" "grep"
+  :added "2020-11-19"
+  :url "http://github.com/mhayashi1120/Emacs-wgrep/raw/master/wgrep.el"
+  :ensure t)
+
 (leaf leaf-convert
   :setq ((scroll-conservatively . 1)))
+
+(leaf vterm
+  :doc "Fully-featured terminal emulator"
+  :req "emacs-25.1"
+  :tag "terminals" "emacs>=25.1"
+  :added "2020-11-27"
+  :url "https://github.com/akermu/emacs-libvterm"
+  :emacs>= 25.1
+  :ensure t)
 
 
 (leaf neotree
@@ -660,6 +676,16 @@
            (neo-show-hidden-files . t)
            (neo-theme . 'icons)
            (neo-create-file-auto-open . t)))
+
+(leaf open-junk-file
+  :doc "Open a junk (memo) file to try-and-error"
+  :tag "tools" "convenience"
+  :added "2020-10-29"
+  :url "http://www.emacswiki.org/cgi-bin/wiki/download/open-junk-file.el"
+  :ensure t
+  :bind (("C-c j" . open-junk-file))
+  :custom ((open-junk-file-find-file-function . 'find-file))
+  )
 
 (leaf multiple-cursors
   :doc "Multiple cursors for Emacs."
@@ -788,6 +814,19 @@
   :url "https://github.com/prettier/prettier-emacs"
   :ensure t)
 
+(leaf auto-shell-command
+  :doc "Run the shell command asynchronously that you specified when you save the file."
+  :req "deferred-20130312" "popwin-20130329"
+  :tag "auto" "deferred" "async" "save" "shell"
+  :added "2020-11-19"
+  :ensure t
+  :after deferred
+  :config
+  (ascmd:add '("/Users/zero.asahi/dev/src/github.com/karabiner-tokushimaru/tokushimaru_portal_system_source/resources/views/tokushimaru/**/.*\.blade.php"       "blade-formatter --w $FILE")))
+
+
+
+
 (leaf scss-mode
   :doc "Major mode for editing SCSS files"
   :tag "mode" "css" "scss"
@@ -843,7 +882,8 @@
   :tag "go" "languages"
   :added "2020-09-16"
   :url "https://github.com/dominikh/go-mode.el"
-  :ensure t)
+  :ensure t
+  :custom ((gofmt-command . "goimports")))
 
 
 

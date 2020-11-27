@@ -1,9 +1,16 @@
 
 ;; ----- amx-history -----
 (
+ vterm
+ lsp
+ ascmd:toggle
  prettier-js-mode
  web-mode
- lsp
+ ascmd:exec
+ firestarter-mode
+ text-mode
+ all-the-icons-install-fonts
+ all-the-icons-insert
  flycheck-mode
  flymake-mode
  counsel-imenu
@@ -29,23 +36,16 @@
  arp
  dbx
  dig
- erc
- ert
- eww
- ftp
- gdb
- irc
- jdb
 )
 
 ;; ----- amx-data -----
 (
  (leaf-convert-region-replace . 1)
  (er/expand-region . 1)
- (prettier-js-mode . 95)
+ (prettier-js-mode . 104)
  (neotree-dir . 4)
- (lsp . 58)
- (web-mode . 41)
+ (lsp . 60)
+ (web-mode . 42)
  (typescript-mode . 3)
  (counsel-imenu . 4)
  (describe-key . 7)
@@ -64,4 +64,13 @@
  (lsp-goto-type-definition . 2)
  (flymake-mode . 2)
  (flycheck-mode . 2)
+ (all-the-icons-insert . 1)
+ (all-the-icons-install-fonts . 1)
+ (text-mode . 1)
+ (firestarter-mode . 4)
+ (firestarter . 2)
+ (ascmd:toggle . 34)
+ (ascmd:exec . 1)
+ (gofmt . 4)
+ (vterm . 3)
 )
