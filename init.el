@@ -732,6 +732,14 @@
   :bind (("C-c p" . projectile-command-map))
   :global-minor-mode t)
 
+(leaf with-editor
+  :doc "Use the Emacsclient as $EDITOR"
+  :req "emacs-24.4" "async-1.9"
+  :tag "tools" "emacs>=24.4"
+  :added "2020-11-27"
+  :url "https://github.com/magit/with-editor"
+  :emacs>= 24.4
+  :ensure t)
 
 (leaf magit
   :doc "A Git porcelain inside Emacs."
