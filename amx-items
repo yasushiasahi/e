@@ -2,10 +2,11 @@
 ;; ----- amx-history -----
 (
  vterm
- gofmt
+ toggle-frame-maximized
+ maximize-window
+ ascmd:toggle
  gofmt-before-save
  lsp
- ascmd:toggle
  revert-buffer
  whitespace-mode
  vterm-other-window
@@ -35,7 +36,6 @@
  er/expand-region
  leaf-convert-region-replace
  cd
- lsp-goto-type-definition
 )
 
 ;; ----- amx-data -----
@@ -69,13 +69,15 @@
  (text-mode . 1)
  (firestarter-mode . 4)
  (firestarter . 2)
- (ascmd:toggle . 42)
+ (ascmd:toggle . 44)
  (ascmd:exec . 1)
  (gofmt . 8)
- (vterm . 19)
+ (vterm . 23)
  (vterm-other-window . 1)
  (whitespace-mode . 2)
  (revert-buffer . 1)
  (gofmt-before-save . 1)
  (magit . 3)
+ (maximize-window . 1)
+ (toggle-frame-maximized . 1)
 )

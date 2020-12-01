@@ -915,9 +915,10 @@
   :url "https://github.com/dominikh/go-mode.el"
   :ensure t
   :custom ((gofmt-command . "goimports"))
-  :hook (go-mode-hook . lsp-deferred)
-  :config
-  (add-hook 'before-save-hook 'gofmt-before-save))
+  :hook ((go-mode-hook . (lambda ()
+                           (setq tab-width 4)
+                           (lsp-deferred)))
+         (before-save-hook . gofmt-before-save)))
 
 
 
