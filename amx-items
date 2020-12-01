@@ -2,12 +2,16 @@
 ;; ----- amx-history -----
 (
  vterm
+ gofmt
+ gofmt-before-save
  lsp
  ascmd:toggle
+ revert-buffer
+ whitespace-mode
+ vterm-other-window
  prettier-js-mode
  web-mode
  ascmd:exec
- firestarter-mode
  text-mode
  all-the-icons-install-fonts
  all-the-icons-insert
@@ -31,11 +35,7 @@
  er/expand-region
  leaf-convert-region-replace
  cd
- 5x5
- amx
- arp
- dbx
- dig
+ lsp-goto-type-definition
 )
 
 ;; ----- amx-data -----
@@ -44,7 +44,7 @@
  (er/expand-region . 1)
  (prettier-js-mode . 104)
  (neotree-dir . 4)
- (lsp . 60)
+ (lsp . 62)
  (web-mode . 42)
  (typescript-mode . 3)
  (counsel-imenu . 4)
@@ -69,8 +69,13 @@
  (text-mode . 1)
  (firestarter-mode . 4)
  (firestarter . 2)
- (ascmd:toggle . 34)
+ (ascmd:toggle . 42)
  (ascmd:exec . 1)
- (gofmt . 4)
- (vterm . 3)
+ (gofmt . 8)
+ (vterm . 19)
+ (vterm-other-window . 1)
+ (whitespace-mode . 2)
+ (revert-buffer . 1)
+ (gofmt-before-save . 1)
+ (magit . 3)
 )

@@ -149,6 +149,12 @@
 	       (scroll-step . 1)
 	       (scroll-preserve-screen-position . t)))
 
+(leaf leaf-convert
+  :config
+  (setq default-directory (concat
+                           (getenv "HOME")
+                           "/")))
+
 ;; 文字コード
 (leaf leaf-convert
   :config
@@ -450,7 +456,10 @@
 	         (ivy-wrap . t)
 	         (enable-recursive-minibuffers . t)
 	         (ivy-fixed-height-minibuffer . t)
-	         (ivy-count-format . "(%d/%d) "))
+	         (ivy-count-format . "(%d/%d) ")
+           (ivy-height-alist . '((t
+                                 lambda (_caller)
+                                 (/ (frame-height) 3)))))
   :global-minor-mode t)
 
 (leaf ivy-rich
@@ -661,8 +670,22 @@
   :added "2020-11-27"
   :url "https://github.com/akermu/emacs-libvterm"
   :emacs>= 25.1
-  :ensure t)
+  :ensure t
+  :bind ((:vterm-mode-map
+          ("C-t" . hydra-window/body))))
 
+(leaf goto-chg
+  :doc "goto last change"
+  :tag "matching" "convenience"
+  :added "2020-11-27"
+  :url "https://github.com/emacs-evil/goto-chg"
+  :ensure t
+  :bind (("M-[" . hydra-goto-chg/goto-last-change)
+         ("M-[" . hydra-goto-chg/goto-last-change-reverse))
+  :config
+  (defhydra hydra-goto-chg ()
+    ("[" goto-last-change)
+    ("]" goto-last-change-reverse)))
 
 (leaf neotree
   :doc "A tree plugin like NerdTree for Vim"
@@ -748,7 +771,7 @@
   :added "2020-08-13"
   :emacs>= 25.1
   :ensure t
-  :after git-commit with-editor
+  :after with-editor
   :custom ((magit-completing-read-function . 'ivy-completing-read)))
 
 (leaf add-node-modules-path
@@ -891,7 +914,10 @@
   :added "2020-09-16"
   :url "https://github.com/dominikh/go-mode.el"
   :ensure t
-  :custom ((gofmt-command . "goimports")))
+  :custom ((gofmt-command . "goimports"))
+  :hook (go-mode-hook . lsp-deferred)
+  :config
+  (add-hook 'before-save-hook 'gofmt-before-save))
 
 
 

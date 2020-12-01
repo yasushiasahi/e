@@ -5,11 +5,15 @@
       '(
         crux-kill-whole-line
         crux-move-beginning-of-line
+        forward-sentence
+        ivy-occur-revert-buffer
         kill-region
         mark-sexp
         sp-backward-delete-char
         sp-delete-char
         sp-kill-hybrid-sexp
+        web-mode-element-rename
+        web-mode-element-vanish
         ))
 
 (setq mc/cmds-to-run-once
