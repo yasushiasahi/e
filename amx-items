@@ -72,7 +72,7 @@
  (ascmd:toggle . 44)
  (ascmd:exec . 1)
  (gofmt . 8)
- (vterm . 23)
+ (vterm . 25)
  (vterm-other-window . 1)
  (whitespace-mode . 2)
  (revert-buffer . 1)

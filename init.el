@@ -155,6 +155,9 @@
                            (getenv "HOME")
                            "/")))
 
+(defun my-set-fontsize (height)
+  (set-face-attribute 'default nil :height height))
+
 ;; 文字コード
 (leaf leaf-convert
   :config
