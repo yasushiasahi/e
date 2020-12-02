@@ -290,6 +290,14 @@
   :emacs>= 24.3
   :ensure t)
 
+(leaf yasnippet
+  :doc "Yet another snippet extension for Emacs"
+  :req "cl-lib-0.5"
+  :tag "emulation" "convenience"
+  :added "2020-12-02"
+  :url "http://github.com/joaotavora/yasnippet"
+  :ensure t)
+
 (leaf company
   :doc "Modular text completion framework"
   :req "emacs-24.3"
