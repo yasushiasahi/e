@@ -682,6 +682,7 @@
   :url "https://github.com/akermu/emacs-libvterm"
   :emacs>= 25.1
   :ensure t
+  :custom ((vterm-buffer-name-string . "vt %s"))
   :bind ((:vterm-mode-map
           ("C-t" . hydra-window/body))))
 
